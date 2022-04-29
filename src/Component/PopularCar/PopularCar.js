@@ -1,9 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useHooks from '../../Hooks/useHooks';
 import './PopularCar.css'
 
 const PopularCar = () => {
     const [car, setCar] = useHooks();
+    const navigate = useNavigate();
+
+    const navigateDetail = id => {
+        navigate(`/inventory/${id}`);
+    }
     return (
         <div className='popular-car pt-5'>
             <div className="container">
@@ -25,9 +30,7 @@ const PopularCar = () => {
                                             <p>Quantity: {cars.quantity}</p>
                                         </div>
                                         <div>
-                                            <Link to='/inventory/:_id'>
-                                                <button className='btn btn-warning'>Inventory</button>
-                                            </Link>
+                                            <button onClick={() => navigateDetail(cars._id)} className='btn btn-warning'>Inventory</button>
                                         </div>
                                     </div>
                                 </div>

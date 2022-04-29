@@ -1,9 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useHooks from '../../Hooks/useHooks';
 import './ManageInventory.css'
 
 const ManageInventory = () => {
     const [car, setCar] = useHooks();
+    const navigate = useNavigate();
+
+    const navigateDetail = id => {
+        navigate(`/inventory/${id}`);
+    }
     return (
         <div className="mangeInventory pt-5">
             <div className='container'>
@@ -20,6 +26,7 @@ const ManageInventory = () => {
                                         <p>Quantity: {cars.quantity}</p>
                                     </div>
                                     <div className='cars'>
+                                        <button onClick={() => navigateDetail(cars._id)} className='btn btn-warning'>Inventory</button>
                                         <button>Update</button>
                                     </div>
                                 </div>
