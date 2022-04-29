@@ -1,0 +1,44 @@
+[
+    {
+        "img": "https://i.ibb.co/6HYDPzg/q3-1-430x321.jpg",
+        "name": "2017 Audi Q7 3.0T Premium quattro",
+        "description": "Standard features for the Premium trim include 18-inch alloy wheels (19-inchers with the V6), xenon headlights, automatic wipers, LED running lights and taillights, power-folding heated mirrors, a panoramic sunroof, roof rails, front and rear parking sensors, forward collision warning with pedestrian detection",
+        "price": "$66495.00",
+        "quantity": "10"
+    },
+    {
+        "img": "https://i.ibb.co/YBXVvZx/q7-1-430x321.webp",
+        "name": "2017 Audi Q7 3.0T Premium quattro",
+        "description": "Standard features for the Premium trim include 18-inch alloy wheels (19-inchers with the V6), xenon headlights, automatic wipers, LED running lights and taillights, power-folding heated mirrors, a panoramic sunroof, roof rails, front and rear parking sensors, forward collision warning with pedestrian detection",
+        "price": "$69495.00",
+        "quantity": "10"
+    },
+    {
+        "img": "https://i.ibb.co/hBjhnrJ/a4-5-430x321.webp",
+        "name": "2017 Audi A4 Prestige",
+        "description": "The 2017 A4 Prestige comes with a 2.0L turbocharged four-cylinder engine good for 252 hp and 273 lb-ft of torque. The A4 Prestige comes standard with front wheel drive, while Quattro all-wheel drive is optional. With front wheel drive it achieves up to 25 mpg city/33 mpg highway in EPA estimates.",
+        "price": "$59495.00",
+        "quantity": "10"
+    },
+    {
+        "img": "https://i.ibb.co/NY2Dqpt/blog-single-img1.jpg",
+        "name": "2017 Audi A4 Prestige",
+        "description": "The 2017 A4 Prestige comes with a 2.0L turbocharged four-cylinder engine good for 252 hp and 273 lb-ft of torque. The A4 Prestige comes standard with front wheel drive, while Quattro all-wheel drive is optional. With front wheel drive it achieves up to 25 mpg city/33 mpg highway in EPA estimates.",
+        "price": "$56300",
+        "quantity": "10"
+    },
+    {
+        "img": "https://i.ibb.co/vZzPGyQ/car1.jpg",
+        "name": "Bmw M2",
+        "description": "The new BMW M2 Coupé is getting ready to once again set the benchmark in its class. With an outstanding combination of performance, agility and precision",
+        "price": "$96300",
+        "quantity": "10"
+    },
+    {
+        "img": "https://i.ibb.co/bzDKZx3/car3.jpg",
+        "name": "bmw m2 horsepower",
+        "description": "The M2's snorty twin-turbo 3.0-liter inline-six is a sweetheart of an engine, and it pumps out 405 horsepower and 406 pound-feet of torque. That combination reaches the rear wheels via a standard six-speed manual transmission or an optional seven-speed dual-clutch automatic.",
+        "price": "$86300",
+        "quantity": "10"
+    }
+]
