@@ -1,0 +1,10 @@
+.header {
+    padding: 25px;
+    background-color: cadetblue;
+}
+
+.header a {
+    font-size: 20px;
+    color: white !important;
+    font-family: sans-serif;
+}

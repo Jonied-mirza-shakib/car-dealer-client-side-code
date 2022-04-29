@@ -6,10 +6,12 @@ import About from './Component/About/About';
 import Blog from './Component/Blog/Blog';
 import LogIn from './Component/LogIn/LogIn';
 import SignUp from './Component/SignUp/SignUp';
+import Header from './Component/Header/Header';
 
 function App() {
   return (
     <div>
+      <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/about' element={<About></About>}></Route>

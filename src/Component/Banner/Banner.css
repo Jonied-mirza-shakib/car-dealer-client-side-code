@@ -1,0 +1,17 @@
+.banner {
+    background-image: url('../../img/banner-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.banner-title h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.banner-title h1 {
+    color: white;
+    font-size: 45px;
+    text-transform: uppercase;
+}
