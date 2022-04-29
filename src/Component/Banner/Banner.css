@@ -1,8 +1,14 @@
 .banner {
     background-image: url('../../img/banner-bg.png');
+    height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+    max-width: 5000px;
+}
+
+.banner-title {
+    margin-top: -220px;
 }
 
 .banner-title h3 {
@@ -14,4 +20,42 @@
     color: white;
     font-size: 45px;
     text-transform: uppercase;
+}
+
+@media screen and (min-width: 567px) and (max-width: 768px) {
+    .banner {
+        background-image: url('../../img/banner-bg.png');
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    .banner img {
+        margin-top: 200px;
+        bottom: 0;
+    }
+
+    .banner-title {
+        margin-top: -100px;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 566px) {
+    .banner img {
+        margin-top: 200px;
+        bottom: 0;
+    }
+
+    .banner-title {
+        margin-top: -100px;
+    }
+
+    .banner-title h3 {
+        font-size: 15px;
+    }
+
+    .banner-title h1 {
+        font-size: 25px;
+    }
 }

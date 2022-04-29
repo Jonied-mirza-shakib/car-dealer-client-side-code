@@ -8,11 +8,8 @@ const Banner = () => {
         <div className='banner'>
             <div className="container">
                 <div className="row pt-5 pb-5">
-                    <div className="col-lg-6">
-                        <img className='w-100' src={img1} alt="" />
-                    </div>
-                    <div className="col-lg-6">
-                        <img className='w-100' src={img3} alt="" />
+                    <div className="col-12">
+                        <img className='w-50' src={img3} alt="" />
                     </div>
                     <div className="row">
                         <div className="col-12 banner-title">

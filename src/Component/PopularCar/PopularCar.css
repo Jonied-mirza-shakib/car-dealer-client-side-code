@@ -1,0 +1,30 @@
+.popular-car {
+    background-color: dimgrey;
+}
+
+.popular-car-title h2 {
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.popular-car-title h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.cars {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.card {
+    background-color: darkblue;
+    height: 500px;
+    align-items: center;
+    padding: 10px;
+    color: aliceblue;
+    margin-bottom: 20px;
+}

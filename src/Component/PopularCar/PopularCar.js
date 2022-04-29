@@ -1,0 +1,50 @@
+import { Link } from 'react-router-dom';
+import useHooks from '../../Hooks/useHooks';
+import './PopularCar.css'
+
+const PopularCar = () => {
+    const [car, setCar] = useHooks();
+    return (
+        <div className='popular-car pt-5'>
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 popular-car-title">
+                        <h2>Check out our recent cars</h2>
+                        <h1>FEATURE CAR</h1>
+                    </div>
+                    <div className="row">
+                        {
+                            car.splice(0, 3).map(cars => <div key={cars._id} className='col-lg-4'>
+                                <div className="card text-center">
+                                    <div className="card-body">
+                                        <img className='w-100' src={cars.img} alt="" />
+                                        <h5>{cars.name}</h5>
+                                        <p>{cars.description.slice(0, 150)}</p>
+                                        <div className='cars'>
+                                            <p>Price: {cars.price}</p>
+                                            <p>Quantity: {cars.quantity}</p>
+                                        </div>
+                                        <div>
+                                            <Link to='/inventory/:_id'>
+                                                <button className='btn btn-warning'>Inventory</button>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>)
+                        }
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12 text-center">
+                        <Link to='/manageInventory'>
+                            <button style={{ fontSize: '20px' }} type='button' className='btn btn-primary'>Manage Inventory</button>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default PopularCar;
