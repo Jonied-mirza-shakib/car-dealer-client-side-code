@@ -9,6 +9,7 @@ import SignUp from './Component/SignUp/SignUp';
 import Header from './Component/Header/Header';
 import ManageInventory from './Component/ManageInventory/ManageInventory';
 import Inventory from './Component/Inventory/Inventory';
+import AddItem from './Component/AddItem/AddItem';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/inventory/:carsId' element={<Inventory></Inventory>}></Route>
         <Route path='/manageInventory' element={<ManageInventory></ManageInventory>}></Route>
+        <Route path='/addItem' element={<AddItem></AddItem>}></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
       </Routes>

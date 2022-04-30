@@ -19,7 +19,7 @@ const PopularCar = () => {
                     </div>
                     <div className="row">
                         {
-                            car.splice(0, 3).map(cars => <div key={cars._id} className='col-lg-4'>
+                            car.map(cars => <div key={cars._id} className='col-lg-4'>
                                 <div className="card text-center">
                                     <div className="card-body">
                                         <img className='w-100' src={cars.img} alt="" />

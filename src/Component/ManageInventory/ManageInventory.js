@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useHooks from '../../Hooks/useHooks';
 import './ManageInventory.css'
 
@@ -25,14 +25,17 @@ const ManageInventory = () => {
                                         <p>Price: {cars.price}</p>
                                         <p>Quantity: {cars.quantity}</p>
                                     </div>
-                                    <div className='cars'>
-                                        <button onClick={() => navigateDetail(cars._id)} className='btn btn-warning'>Inventory</button>
-                                        <button>Update</button>
-                                    </div>
                                 </div>
                             </div>
                         </div>)
                     }
+                </div>
+                <div className="row">
+                    <div className="col-12 text-center">
+                        <Link to='/addItem'>
+                            <button type='button' className='btn btn-primary fs-4'>Add Item</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
