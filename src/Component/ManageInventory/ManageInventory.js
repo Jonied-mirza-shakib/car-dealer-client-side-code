@@ -15,7 +15,7 @@ const ManageInventory = () => {
             <div className='container'>
                 <div className="row">
                     {
-                        car.map(cars => <div className='col-lg-4'>
+                        car.map(cars => <div key={car._id} className='col-lg-4'>
                             <div className="card text-center">
                                 <div className="card-body">
                                     <img className='w-100' src={cars.img} alt="" />

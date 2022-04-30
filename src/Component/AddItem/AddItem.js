@@ -4,18 +4,35 @@ import { useForm } from "react-hook-form";
 const AddItem = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-
+        console.log(data)
+        const url = `http://localhost:5000/data`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
     };
     return (
         <div className='row'>
             <div className="col-12">
-                <div className="container mx-auto pt-5">
-                    <form className='d-flex flex-column w-50 mx-auto' onSubmit={handleSubmit(onSubmit)}>
-                        <input placeholder='name' className='mb-3' {...register("name", { required: true, maxLength: 20 })} />
-                        <textarea placeholder='description' className='mb-3' {...register("description")} />
-                        <input placeholder='price' className='mb-3' type="text" {...register("price")} />
-                        <input placeholder='Photo Url' className='mb-3' type="text" {...register("img")} />
-                        <input type="submit" value='Add Item' />
+                <div className="container">
+                    <h2 className='text-center pt-5 pb-3'>Please Add Item</h2>
+                </div>
+            </div>
+            <div className="col-12">
+                <div className="container">
+                    <form className='w-50 mx-auto d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+                        <input className='mb-3 p-2 border-2 rounded' placeholder='Name' {...register("name")} />
+                        <textarea className='mb-3 p-2 border-2 rounded' placeholder='Description' {...register("description")} />
+                        <input className='mb-3 p-2 border-2 rounded' placeholder='Price' type="text" {...register("price")} />
+                        <input className='mb-3 p-2 border-2 rounded' placeholder='Photo Url' type="text" {...register("img")} />
+                        <input className='btn btn-primary' type="submit" value='Add Item' />
                     </form>
                 </div>
             </div>
