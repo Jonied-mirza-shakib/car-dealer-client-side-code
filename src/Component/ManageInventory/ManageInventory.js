@@ -10,6 +10,24 @@ const ManageInventory = () => {
     const navigateDetail = id => {
         navigate(`/inventory/${id}`);
     }
+
+    const handleClick = id => {
+        console.log(id)
+        const proceed = window.confirm('Are you sure you want to delete?');
+        if (proceed) {
+            const url = `http://localhost:5000/data/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        const remaining = car.filter(cars => cars._id !== id)
+                        setCar(remaining)
+                    }
+                })
+        }
+    }
     return (
         <div className="mangeInventory pt-5">
             <div className='container'>
@@ -24,6 +42,9 @@ const ManageInventory = () => {
                                     <div className='cars'>
                                         <p>Price: {cars.price}</p>
                                         <p>Quantity: {cars.quantity}</p>
+                                    </div>
+                                    <div>
+                                        <button onClick={() => handleClick(cars._id)} className='btn btn-danger d-block w-100' type='button'>Delete</button>
                                     </div>
                                 </div>
                             </div>

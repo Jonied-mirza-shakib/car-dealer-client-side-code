@@ -17,17 +17,18 @@ const AddItem = () => {
             .then(result => {
                 console.log(result);
             })
+
     };
     return (
-        <div className='row'>
+        <div className='row w-100 pb-5' style={{ backgroundColor: 'dimgray' }}>
             <div className="col-12">
                 <div className="container">
-                    <h2 className='text-center pt-5 pb-3'>Please Add Item</h2>
+                    <h2 className='text-center pt-5 pb-3 text-light'>Please Add Item</h2>
                 </div>
             </div>
             <div className="col-12">
                 <div className="container">
-                    <form className='w-50 mx-auto d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+                    <form style={{ backgroundColor: 'darkcyan', padding: '20px' }} className='w-50 mx-auto d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                         <input className='mb-3 p-2 border-2 rounded' placeholder='Name' {...register("name")} />
                         <textarea className='mb-3 p-2 border-2 rounded' placeholder='Description' {...register("description")} />
                         <input className='mb-3 p-2 border-2 rounded' placeholder='Price' type="text" {...register("price")} />
