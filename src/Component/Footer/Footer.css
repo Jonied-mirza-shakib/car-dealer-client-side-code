@@ -1,0 +1,12 @@
+.icon {
+    width: 50%;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.icon a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}

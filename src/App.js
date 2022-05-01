@@ -11,6 +11,7 @@ import ManageInventory from './Component/ManageInventory/ManageInventory';
 import Inventory from './Component/Inventory/Inventory';
 import AddItem from './Component/AddItem/AddItem';
 import UpdateData from './Component/UpdateData/UpdateData';
+import Footer from './Component/Footer/Footer';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
