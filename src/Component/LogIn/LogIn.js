@@ -6,6 +6,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const LogIn = () => {
     const [email, setEmail] = useState('');
@@ -52,12 +53,12 @@ const LogIn = () => {
 
     }
     return (
-        <div className='login' style={{ backgroundColor: 'darkviolet', color: 'white' }}>
+        <div style={{ backgroundColor: 'dimgray' }}>
             <div className="container">
                 <div className="row">
                     <h4 className='fs-4 text-light text-center pt-5 pb-3'>Login Please !!!</h4>
                     <div className="col-12">
-                        <div className='w-50 mx-auto'>
+                        <div className='w-50 mx-auto' style={{ backgroundColor: 'aliceblue', padding: '30px', marginBottom: '50px', borderRadius: '10px' }}>
                             <Form onSubmit={handleLoginform}>
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Label>Email address</Form.Label>
@@ -70,14 +71,14 @@ const LogIn = () => {
                                 </Form.Group>
                                 <input className='form-submit btn btn-primary' type="submit" value="Login" />
                             </Form>
-                            <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none text-light' onClick={resetPassword}>Reset Password</button> </p>
+                            <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none text-warning' onClick={resetPassword}>Reset Password</button> </p>
                             <p style={{ color: 'red' }}>{error?.message}</p>
                             {
                                 loading && <p>Loading...</p>
                             }
-                            <p> Are You New Person? <span> <Link className='text-light' to='/signup' >Create an Account</Link></span> </p>
+                            <p> Are You New Person? <span> <Link className='text-warning' to='/signup' >Create an Account</Link></span> </p>
                             <ToastContainer />
-                            {/* <SocialLogin></SocialLogin> */}
+                            <SocialLogin></SocialLogin>
                         </div>
                     </div>
                 </div>
