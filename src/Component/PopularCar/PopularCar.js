@@ -38,7 +38,7 @@ const PopularCar = () => {
                         }
                     </div>
                 </div>
-                <div className="row">
+                <div className="row pb-5">
                     <div className="col-12 text-center">
                         <Link to='/manageInventory'>
                             <button style={{ fontSize: '20px' }} type='button' className='btn btn-primary'>Manage Inventory</button>
