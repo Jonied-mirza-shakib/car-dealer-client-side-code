@@ -1,0 +1,15 @@
+.form {
+    padding: 30px;
+    background-color: darkcyan;
+}
+
+.form input {
+    border: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.form textarea {
+    margin-bottom: 10px;
+    font-size: 18px;
+}

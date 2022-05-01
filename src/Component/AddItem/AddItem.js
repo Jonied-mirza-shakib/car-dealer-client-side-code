@@ -31,6 +31,7 @@ const AddItem = () => {
                         <input className='mb-3 p-2 border-2 rounded' placeholder='Name' {...register("name")} />
                         <textarea className='mb-3 p-2 border-2 rounded' placeholder='Description' {...register("description")} />
                         <input className='mb-3 p-2 border-2 rounded' placeholder='Price' type="text" {...register("price")} />
+                        <input className='mb-3 p-2 border-2 rounded' placeholder='quantity' type="text" {...register("quantity")} />
                         <input className='mb-3 p-2 border-2 rounded' placeholder='Photo Url' type="text" {...register("img")} />
                         <input className='btn btn-primary' type="submit" value='Add Item' />
                     </form>

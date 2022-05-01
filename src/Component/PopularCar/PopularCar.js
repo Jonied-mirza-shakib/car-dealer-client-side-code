@@ -19,12 +19,12 @@ const PopularCar = () => {
                     </div>
                     <div className="row">
                         {
-                            car.map(cars => <div key={cars._id} className='col-lg-4'>
+                            car.slice(0, 6).map(cars => <div key={cars._id} className='col-lg-4'>
                                 <div className="card text-center">
                                     <div className="card-body">
                                         <img className='w-100' src={cars.img} alt="" />
                                         <h5>{cars.name}</h5>
-                                        <p>{cars.description.slice(0, 150)}</p>
+                                        <p>{cars.description}</p>
                                         <div className='cars'>
                                             <p>Price: {cars.price}</p>
                                             <p>Quantity: {cars.quantity}</p>
