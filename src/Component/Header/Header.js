@@ -3,9 +3,16 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../img/logo-light.webp';
 import './Header.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+    const handleSignOut = () => {
+        signOut(auth)
+    }
     return (
         <div>
             <Navbar expand="lg" className='header'>
@@ -23,13 +30,15 @@ const Header = () => {
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
-                            <Nav.Link as={Link} to="/login">Sign In</Nav.Link>
+                            {
+                                user ?
+                                    <button onClick={handleSignOut} className='text-white mx-3' style={{ backgroundColor: '#420205' }}>Sign out</button> :
+                                    <Nav.Link as={Link} to="/login">Sign In</Nav.Link>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-
-
         </div>
     );
 };
