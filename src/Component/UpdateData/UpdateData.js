@@ -20,7 +20,7 @@ const UpdateData = () => {
         let quantity = event.target.quantity.value;
         const allData = { name, img, description, price, quantity };
         console.log(allData)
-        const url = `http://localhost:5000/data/${updateId}`;
+        const url = `https://infinite-everglades-72393.herokuapp.com/data/${updateId}`;
         console.log(url)
         fetch(url, {
             method: "PUT",
