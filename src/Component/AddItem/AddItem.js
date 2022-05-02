@@ -5,7 +5,7 @@ const AddItem = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/data`;
+        const url = `https://infinite-everglades-72393.herokuapp.com/data`;
         fetch(url, {
             method: 'POST',
             headers: {

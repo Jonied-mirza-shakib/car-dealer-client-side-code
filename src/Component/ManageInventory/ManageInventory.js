@@ -15,7 +15,7 @@ const ManageInventory = () => {
         console.log(id)
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/data/${id}`
+            const url = `https://infinite-everglades-72393.herokuapp.com/data/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

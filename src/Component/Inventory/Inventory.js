@@ -8,7 +8,7 @@ const Inventory = () => {
     const [decrease, setDecrease] = useState();
     const navigate = useNavigate();
     useEffect(() => {
-        const url = `http://localhost:5000/data/${carsId}`;
+        const url = `https://infinite-everglades-72393.herokuapp.com/data/${carsId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setCar(data))

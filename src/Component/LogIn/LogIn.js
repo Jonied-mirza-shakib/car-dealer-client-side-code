@@ -47,10 +47,9 @@ const LogIn = () => {
     }, [navigate, user])
 
 
-    const handleLoginform = event => {
+    const handleLoginform = async event => {
         event.preventDefault();
-        signInWithEmailAndPassword(email, password);
-
+        await signInWithEmailAndPassword(email, password);
     }
     return (
         <div style={{ backgroundColor: 'dimgray' }}>
@@ -67,7 +66,7 @@ const LogIn = () => {
 
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>Password</Form.Label>
-                                    <Form.Control onBlur={handlePassword} type="password" value={password} placeholder="Password" required />
+                                    <Form.Control onBlur={handlePassword} type="password" placeholder="Password" required />
                                 </Form.Group>
                                 <input className='form-submit btn btn-primary' type="submit" value="Login" />
                             </Form>

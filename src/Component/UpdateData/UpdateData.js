@@ -6,7 +6,7 @@ const UpdateData = () => {
     const { updateId } = useParams();
     const [update, setUpdate] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/data/${updateId}`;
+        const url = `https://infinite-everglades-72393.herokuapp.com/data/${updateId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setUpdate(data));
